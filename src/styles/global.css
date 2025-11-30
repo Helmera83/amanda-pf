@@ -1,9 +1,10 @@
 @import "tailwindcss";
-@plugin '@tailwindcss/typography';
+
 
 @theme inline {
-	--font-sans: var(--font-manrope);
+    --font-sans: var(--font-manrope);
+    --font-mono: var(--font-major-mono);
 }
-.H1{
-    font-family: var(--font-major-mono);
+h1 {
+    @apply font-mono
 }
