@@ -15,14 +15,19 @@ export default defineConfig({
 
   integrations: [react()],
 
-  experimental: {
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "Geist",
-      cssVariable: "--font-geist",
-      fallbacks: ["Inter", "sans-serif"],
-    }]
-  },
+    experimental: {
+        fonts: [{
+            provider: fontProviders.google(),
+            name: "Manrope",
+            cssVariable: "--font-manrope",
+            fallbacks: ["Inter", "sans-serif"],
+        }, {
+            provider: fontProviders.google(),
+            name: "Major Mono Display",
+            cssVariable: "--font-major-mono",
+            fallbacks: ["monospace"],
+        }]
+    },
 
   adapter: vercel()
 });

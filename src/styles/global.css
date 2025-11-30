@@ -2,5 +2,8 @@
 @plugin '@tailwindcss/typography';
 
 @theme inline {
-	--font-sans: var(--font-geist);
+	--font-sans: var(--font-manrope);
+}
+.H1{
+    font-family: var(--font-major-mono);
 }
