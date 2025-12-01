@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import H1 from "../components/h1.astro";
+import profileImage from "../assets/amanda-helmer.png";
 import InfoLayout from "../layouts/InfoLayout.astro";
 ---
 
@@ -9,7 +11,14 @@ import InfoLayout from "../layouts/InfoLayout.astro";
                <H1> About </H1>
          </div>
          <div class="sm:space-y-4">
-         <h2 class="text-3xl text-zinc-100"> Amanda Helmer</h2>
+             <div class="flex items-center gap-4 sm:gap-6 mb-4">
+                 <Image
+                         src={profileImage}
+                         alt="Amanda Helmer"
+                         class="w-16 h-16 sm:w-24 sm:h-24 rounded-full object-cover flex-shrink-0"
+                 />
+                 <h2 class="text-3xl text-zinc-100">Amanda Helmer</h2>
+             </div>
              <p class="text-md text-zinc-400 text-balance">
                  I craft digital products with an obsessive attention to detail and a deep appreciation for visual harmony. Every pixel, every interaction, every moment matters. I believe that beauty and function are inseparable—that the most effective solutions are also the most elegant. My work reflects a disciplined pursuit of both aesthetic excellence and measurable results.
              </p>

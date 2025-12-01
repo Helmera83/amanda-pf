@@ -1,15 +1,15 @@
 ---
 isDraft: false
-title: Make Something Heavy
+title: 
 snippet: We're creating more than ever, but it weighs nothing.
 slug: make-something-heavy
-author: Anu Atluru 
+author: Amanda Helmer 
 category: Craft
 readingDuration: 1
-pubDate: 2025 3 9
+pubDate: 2025 11 30
 coverAlt: Women Holding Things - Maira Kalman, 2022.
-originalLink: https://www.workingtheorys.com/p/make-something-heavy
-cover: https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facc54571-c711-44a0-a529-a501d8565466_680x878.jpeg
+originalLink:
+cover: 
 ---
 Improving product design as a non-designer starts with a few repeatable habits: talk to users often, simplify flows, and apply basic visual rules like consistency, spacing, and hierarchy. You do not need to “be a designer” to ship clearer, more usable products if you focus on small, high-leverage changes in how screens and journeys are structured.​
 
