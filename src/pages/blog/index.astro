@@ -36,16 +36,16 @@ const articles = articlesResult?.data?.articles || [];
 
             {
                 categories.map((category) => (
-                    <li>
-                        <a
-                            href={`/blog?category=${category.toLowerCase()}`}
+                        <li>
+
+                           <a href={`/blog?category=${category.toLowerCase()}`}
                             class={clsx("w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out",
-                                selectedCategory === category.toLowerCase() ? "text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20" : "text-zinc-400 hover:text-zinc-200"
-                            )}
-                        >
+                            selectedCategory === category.toLowerCase() ? "text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20" : "text-zinc-400 hover:text-zinc-200"
+                        )}
+                            >
                             {category}
-                        </a>
-                    </li>
+                            </a>
+                        </li>
                 ))
             }
         </ul>
@@ -53,11 +53,13 @@ const articles = articlesResult?.data?.articles || [];
         <ul class="mt-4 space-y-6">
             {
                 articles.map((article) => (
-                    <li>
-                        <a
-                            class="space-y-1 group"
-                            href={`/blog/${article.data.slug}`}
-                        >
+                        <li>
+
+                           <a class="space-y-1 group"
+                            href={article.data.originalLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
                             <h2 class="text-xl xl:text-2xl text-zinc-300 group-hover:text-white text-balance font-medium underline group-hover:underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
                                 {article.data.title}
                             </h2>
@@ -68,8 +70,8 @@ const articles = articlesResult?.data?.articles || [];
                                 {formatDate(article.data.pubDate)} &middot;{" "}
                                 {article.data.author}
                             </p>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
                 ))
             }
         </ul>

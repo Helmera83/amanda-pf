@@ -3,8 +3,8 @@ import { z, reference, defineCollection } from "astro:content";
 
 const articles = defineCollection({
     loader: glob({ pattern: ["**/*.md", "**/*.mdx"], base: "./src/content/articles" }),
-    schema: ({ image }) => z.object({
-        cover: image(),
+    schema: z.object({
+        cover: z.string(), // Changed from image()
         coverAlt: z.string(),
         title: z.string(),
         slug: z.string(),
