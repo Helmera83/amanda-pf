@@ -1,10 +1,4 @@
-# Design Hacks
-
-Status: In Review
-Category: Business
-Tags: Design, Tutorial
-Author: Amanda Helmer
-Publication Date: November 30, 2025 6:00 PM (CST)
+#
 
 Improving product design as a non-designer starts with a few repeatable habits: talk to users often, simplify flows, and apply basic visual rules like consistency, spacing, and hierarchy. You do not need to “be a designer” to ship clearer, more usable products if you focus on small, high-leverage changes in how screens and journeys are structured.
 
