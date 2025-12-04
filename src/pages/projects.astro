@@ -12,16 +12,17 @@ const projects = [
         title: "OmniTutor",
         description: "AI-powered personalized learning platform adapting to individual student needs.",
         image: omniTutorImg,
+        href: "/projects/omnitutor", // Add project links
     },
     {
         title: "Gig Milage Calculator",
         description: "A web app to track mileage and expenses for gig economy workers.",
-
+        href: "/projects/gig-mileage", // Add project links
     },
     {
         title: "Eliminate Collateral Consequences Campaign",
         description: "Advocacy initiative to reform laws affecting individuals with criminal records.",
-
+        href: "/projects/ecc-campaign", // Add project links
     }
 ];
 ---
@@ -33,17 +34,21 @@ const projects = [
         <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
             {projects.map((project) => (
                     <li>
-                        {project.image && (
-                                <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        class="w-full h-48 object-cover rounded-lg"
-                                />
-                        )}
-                        <div class="p-1 sm:p-2">
-                            <h2 class="text-base text-zinc-100">{project.title}</h2>
-                            <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
-                        </div>
+                        <a href={project.href} class="group block">
+                            {project.image && (
+                                    <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                                    />
+                            )}
+                            <div class="p-1 sm:p-2">
+                                <h2 class="text-base text-zinc-100 group-hover:text-white underline decoration-transparent group-hover:decoration-zinc-500 underline-offset-2 transition-all duration-300">
+                                    {project.title}
+                                </h2>
+                                <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+                            </div>
+                        </a>
                     </li>
             ))}
         </ul>

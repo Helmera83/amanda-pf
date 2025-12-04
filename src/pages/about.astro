@@ -1,3 +1,4 @@
+
 ---
 import { Image } from 'astro:assets';
 import H1 from "../components/h1.astro";
@@ -6,22 +7,44 @@ import InfoLayout from "../layouts/InfoLayout.astro";
 ---
 
 <InfoLayout>
-     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
-         <div class="space-y-4 sm:space-y-12">
-               <H1> About </H1>
-         </div>
-         <div class="sm:space-y-4">
-             <div class="flex items-center gap-4 sm:gap-6 mb-4">
-                 <Image
-                         src={profileImage}
-                         alt="Amanda Helmer"
-                         class="w-16 h-16 sm:w-24 sm:h-24 rounded-full object-cover flex-shrink-0"
-                 />
-                 <h2 class="text-3xl text-zinc-100">Amanda Helmer</h2>
-             </div>
-             <p class="text-md text-zinc-400 text-balance">
-                 I craft digital products with an obsessive attention to detail and a deep appreciation for visual harmony. Every pixel, every interaction, every moment matters. I believe that beauty and function are inseparable—that the most effective solutions are also the most elegant. My work reflects a disciplined pursuit of both aesthetic excellence and measurable results.
-             </p>
-         </div>
-     </div>
+    <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-16 sm:gap-32">
+        <div class="space-y-4 sm:space-y-12">
+            <H1> About </H1>
+        </div>
+
+        <div class="space-y-8 sm:space-y-12">
+            <!-- Profile Section with Better Visual Hierarchy -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8">
+                <!-- Enhanced Profile Image -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-zinc-500/20 to-zinc-700/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                    <Image
+                            src={profileImage}
+                            alt="Amanda Helmer"
+                            class="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full object-cover ring-2 ring-zinc-700 ring-offset-4 ring-offset-zinc-900 group-hover:ring-zinc-600 transition-all duration-300"
+                    />
+                </div>
+
+                <!-- Name and Title -->
+                <div class="space-y-2">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl text-zinc-100 font-semibold">
+                        Amanda Helmer
+                    </h2>
+                    <p class="text-lg sm:text-xl text-zinc-400">
+                        Product Designer & UX Strategist
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bio Section -->
+            <div class="max-w-2xl space-y-4">
+                <p class="text-base sm:text-lg text-zinc-300 leading-relaxed">
+                    I craft digital products with an obsessive attention to detail and a deep appreciation for visual harmony.
+                </p>
+                <p class="text-base sm:text-lg text-zinc-400 leading-relaxed">
+                    Every pixel, every interaction, every moment matters. I believe that beauty and function are inseparable—that the most effective solutions are also the most elegant. My work reflects a disciplined pursuit of both aesthetic excellence and measurable results.
+                </p>
+            </div>
+        </div>
+    </div>
 </InfoLayout>
