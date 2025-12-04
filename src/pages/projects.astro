@@ -3,40 +3,49 @@ import { Image } from 'astro:assets';
 import H1 from "../components/h1.astro";
 import InfoLayout from "../layouts/InfoLayout.astro";
 
-;
+// Import your images
+import omniTutorImg from '../assets/omnitutor.jpg';
+
 
 const projects = [
-     {
-          title: "AC Generator",
-          description: "Transform mechanical energy into alternating current, powering the modern electric grid",
+    {
+        title: "OmniTutor",
+        description: "AI-powered personalized learning platform adapting to individual student needs.",
+        image: omniTutorImg,
+    },
+    {
+        title: "Gig Milage Calculator",
+        description: "A web app to track mileage and expenses for gig economy workers.",
 
-     },
-     {
-          title: "Fluid Propulsion",
-          description: "Bladeless turbine using fluid dynamics for efficient, low-friction propulsion.",
+    },
+    {
+        title: "Eliminate Collateral Consequences Campaign",
+        description: "Advocacy initiative to reform laws affecting individuals with criminal records.",
 
-     },
-     {
-          title: "Electro-Magnetic Motor",
-          description: "Harness alternating current to produce smooth, efficient rotary motion.",
-
-     }];
+    }
+];
 ---
 
 <InfoLayout>
-     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
-          <H1> Projects </H1>
+    <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+        <H1> Projects </H1>
 
-          <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
-               {projects.map((project) => (
+        <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+            {projects.map((project) => (
                     <li>
-
-                         <div class="p-1 sm:p-2">
-                              <h2 class="text-base text-zinc-100">{project.title}</h2>
-                              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
-                         </div>
+                        {project.image && (
+                                <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        class="w-full h-48 object-cover rounded-lg"
+                                />
+                        )}
+                        <div class="p-1 sm:p-2">
+                            <h2 class="text-base text-zinc-100">{project.title}</h2>
+                            <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+                        </div>
                     </li>
-               ))}
-          </ul>
-     </div>
+            ))}
+        </ul>
+    </div>
 </InfoLayout>
