@@ -6,10 +6,13 @@
     --font-mono: var(--font-major-mono);
 }
 h1 {
-    @apply font-mono
+    @apply font-mono font-bold
+}
+h2 {
+    @apply font-mono font-bold text-zinc-100 mb-4
 }
 p {
-    @apply font-sans
+    @apply font-sans text-zinc-200 mb-6 leading-relaxed
 }
 a {
     @apply text-zinc-100 hover:text-red-400 transition-colors;

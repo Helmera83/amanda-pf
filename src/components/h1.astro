@@ -1,4 +1,4 @@
----
+U---
 import clsx from "clsx/lite";
 
 type Props = {
@@ -13,7 +13,7 @@ const { size = "default", className } = Astro.props;
         class={clsx(
             "text-zinc-300 font-bold text-balance font-mono",
             size === "default" && "text-6xl md:text-8xl xl:text-9xl tracking-tight",
-            size === "large" && "text-8xl md:text-[120px] lg:text-[160px] tracking-tighter",
+            size === "large" && "text-6xl md:text-8xl lg:text-[120px] tracking-tighter",
             size === "medium" && "text-4xl md:text-8xl lg:text-9xl tracking-tighter",
             className,
         )}
