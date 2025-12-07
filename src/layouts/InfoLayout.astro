@@ -18,7 +18,7 @@ const pathname = Astro.url.pathname;
                 </div>
 		</nav>
 
-		<main class="relative"  >
+		<main class="relative info-layout-main"  >
 			<slot />
 			<Footer />
 		</main>
@@ -26,3 +26,26 @@ const pathname = Astro.url.pathname;
 
 	</div>
 </RootLayout>
+
+<style>
+	/* Mobile responsive adjustments for info layout */
+	@media (max-width: 640px) {
+		.info-layout-main {
+			max-width: calc(100vw - 3rem);
+			font-size: 0.9rem;
+		}
+		
+		.info-layout-main h1 {
+			font-size: 1.75rem;
+		}
+		
+		.info-layout-main h2 {
+			font-size: 1.25rem;
+		}
+		
+		.info-layout-main p {
+			font-size: 0.875rem;
+			line-height: 1.5;
+		}
+	}
+</style>
