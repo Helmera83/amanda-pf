@@ -31,6 +31,7 @@ const pathname = Astro.url.pathname;
 	/* Mobile responsive adjustments for info layout */
 	@media (max-width: 640px) {
 		.info-layout-main {
+			/* Constrain width to viewport minus left sidebar (w-4 = 1rem) and padding (2rem) */
 			max-width: calc(100vw - 3rem);
 			font-size: 0.9rem;
 		}
